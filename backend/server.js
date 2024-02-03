@@ -20,6 +20,9 @@ app.use((req, res, next) => {
 })
 
 // routes
+app.use('/',(req,res)=>{
+  res.send('Home');
+})
 app.use('/api/workouts', workoutRoutes)
 app.use('/api/user', userRoutes)
 
