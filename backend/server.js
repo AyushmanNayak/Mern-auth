@@ -26,9 +26,9 @@ app.use('/api/user', userRoutes)
 // ====================  Deployment ========================= //
 if (process.env.NODE_ENV === "production") {
   // Establishes the path to our frontend (most important)
-  app.use(express.static(path.join(DIRNAME, "/frontend/build")));
+  app.use(express.static(path.join(DIRNAME, "./frontend/build")));
   app.get("*", (req, res) =>
-    res.sendFile(path.join(DIRNAME, "/frontend/build/index.html"))
+    res.sendFile(path.join(DIRNAME, "./frontend/build/index.html"))
   );
 }
 // ====================  Deployment ========================= //
